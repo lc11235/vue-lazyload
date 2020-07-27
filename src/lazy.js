@@ -348,7 +348,8 @@ export default function (Vue) {
         if (!catIn) return
         // 设置延迟加载的时间
         setTimeout(() => {
-          if (!catIn) return
+          const catIn1 = listener.checkInView()
+          if (!catIn1) return
           listener.load()
         }, 5000)
         
