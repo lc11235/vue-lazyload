@@ -1357,7 +1357,11 @@ var Lazy = function (Vue) {
           }
           var catIn = listener.checkInView();
           if (!catIn) return;
-          listener.load();
+          // 设置延迟加载的时间
+          setTimeout(function () {
+            if (!catIn) return;
+            listener.load();
+          }, 1500);
         });
         freeList.forEach(function (item) {
           remove(_this7.ListenerQueue, item);

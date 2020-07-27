@@ -346,7 +346,12 @@ export default function (Vue) {
         }
         const catIn = listener.checkInView()
         if (!catIn) return
-        listener.load()
+        // 设置延迟加载的时间
+        setTimeout(() => {
+          if (!catIn) return
+          listener.load()
+        }, 1500)
+        
       })
       freeList.forEach(item => {
         remove(this.ListenerQueue, item)
