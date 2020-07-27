@@ -345,10 +345,12 @@ export default function (Vue) {
           freeList.push(listener)
         }
         const catIn = listener.checkInView()
+        console.oog(catIn);
         if (!catIn) return
         // 设置延迟加载的时间
         setTimeout(() => {
           const catIn1 = listener.checkInView()
+          console.log(catIn1);
           if (!catIn1) return
           listener.load()
         }, 5000)
