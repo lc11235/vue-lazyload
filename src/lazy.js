@@ -350,7 +350,7 @@ export default function (Vue) {
         setTimeout(() => {
           if (!catIn) return
           listener.load()
-        }, 1500)
+        }, 5000)
         
       })
       freeList.forEach(item => {

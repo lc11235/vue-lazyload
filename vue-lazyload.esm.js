@@ -1361,7 +1361,7 @@ var Lazy = function (Vue) {
           setTimeout(function () {
             if (!catIn) return;
             listener.load();
-          }, 1500);
+          }, 5000);
         });
         freeList.forEach(function (item) {
           remove(_this7.ListenerQueue, item);
